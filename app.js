@@ -150,8 +150,6 @@ function checkResult(target){
 
            ){
             
-            console.log(`Column ${i + 1}: ${target.firstElementChild.innerText} won !`);
-
             resetBtn.style.display = 'block';
 
             displayPlayer.remove();
@@ -172,8 +170,6 @@ function checkResult(target){
 
          ){
            
-           console.log(`L-R Diagonal: ${target.firstElementChild.innerText}  won !`);
-
            resetBtn.style.display = 'block';
 
            displayPlayer.remove();
@@ -191,8 +187,6 @@ function checkResult(target){
 
          // Checking the condition from the right to left diagonally
          if ( i === 2 && appContainer.children[i].innerText !== '' && appContainer.children[i].innerText === appContainer.children[i + 2].innerText && appContainer.children[i + 2].innerText === appContainer.children[i + 4].innerText){
-
-            console.log(`R-L Diagonal: ${target.firstElementChild.innerText}  won !`);
 
             resetBtn.style.display = 'block';
 
@@ -214,8 +208,6 @@ function checkResult(target){
 
      // Checking for a draw
      if (sumCount === 9 && !flagSum) {
-
-        console.log("It's a draw!");
 
         resetBtn.style.display = 'block';
 
