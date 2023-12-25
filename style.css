@@ -53,7 +53,7 @@ body{
 .grid-items{
     position: relative;
     border: 1.5px solid rgba(200, 200, 200, 0.867);
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.7);
     width: 100%;
     min-height: 140px;
     cursor: pointer;
