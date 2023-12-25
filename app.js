@@ -145,6 +145,71 @@ function checkResult(target){
 
         }
 
+        // Checking the outcome of the game for all columns
+        if (( appContainer.children[i].innerText != '' && appContainer.children[i].innerText === appContainer.children[i + 3].innerText && appContainer.children[i + 3].innerText === appContainer.children[i + 6].innerText)
+
+           ){
+            
+            console.log(`Column ${i + 1}: ${target.firstElementChild.innerText} won !`);
+
+            resetBtn.style.display = 'block';
+
+            displayPlayer.remove();
+
+            matchConcluded.innerText = 'Game Over';
+            matchConcluded.style.fontSize = '30px';
+            matchConcluded.style.color = 'red';
+
+            result.innerText = `Player ${target.firstElementChild.innerText} , you've won the game!`;
+            gameOver = true;
+            flagSum = true;
+
+            resetGame(matchConcluded);
+        }
+
+        // Checking the condition from left to right diagonally
+        if ( i === 0 &&  appContainer.children[i].innerText  != '' && appContainer.children[i].innerText === appContainer.children[i + 4].innerText && appContainer.children[i + 4].innerText === appContainer.children[i + 8].innerText
+
+         ){
+           
+           console.log(`L-R Diagonal: ${target.firstElementChild.innerText}  won !`);
+
+           resetBtn.style.display = 'block';
+
+           displayPlayer.remove();
+
+           matchConcluded.innerText = 'Game Over';
+           matchConcluded.style.fontSize = '30px';
+           matchConcluded.style.color = 'red';
+
+           result.innerText = `Player ${target.firstElementChild.innerText} , you've won the game!`;
+           gameOver = true;
+           flagSum = true;
+           
+           resetGame(matchConcluded);
+        }
+
+         // Checking the condition from the right to left diagonally
+         if ( i === 2 && appContainer.children[i].innerText !== '' && appContainer.children[i].innerText === appContainer.children[i + 2].innerText && appContainer.children[i + 2].innerText === appContainer.children[i + 4].innerText){
+
+            console.log(`R-L Diagonal: ${target.firstElementChild.innerText}  won !`);
+
+            resetBtn.style.display = 'block';
+
+            displayPlayer.remove();
+
+            matchConcluded.innerText = 'Game Over';
+            matchConcluded.style.fontSize = '30px';
+            matchConcluded.style.color = 'red';
+
+            result.innerText = `Player ${target.firstElementChild.innerText} , you've won the game!`;
+            gameOver = true;
+            flagSum = true;
+
+            resetGame(matchConcluded);
+
+        }
+
     }
 
 }
