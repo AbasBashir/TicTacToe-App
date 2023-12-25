@@ -23,6 +23,12 @@ body{
     height: 100vh;
 }
 
+.background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #title{
     color: #ffffff;
     text-align: center;
@@ -53,6 +59,34 @@ body{
     cursor: pointer;
 }
 
+.circle{
+    position: absolute;
+    font-size: 7.5rem;
+    color: #09C372; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.x{
+    position: absolute;
+    font-size: 7.5rem;
+    color: #498AFB; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.display .display-player{
+    color: #09C372;
+    font-size: 2.5rem;
+}
+
+.display .display-player.playerX{
+    color: #498AFB;
+    font-size: 2.5rem;
+}
+
 .controls {
     display: flex;
     flex-direction: row;
@@ -66,7 +100,8 @@ body{
     color: #fff;
 }
 
-.controls button {
+.controls #reset {
+    display: none;
     background-color: #FF0000;
     color: white;
     padding: 8px;
