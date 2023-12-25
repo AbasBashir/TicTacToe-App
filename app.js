@@ -212,4 +212,24 @@ function checkResult(target){
 
     }
 
+     // Checking for a draw
+     if (sumCount === 9 && !flagSum) {
+
+        console.log("It's a draw!");
+
+        resetBtn.style.display = 'block';
+
+        displayPlayer.remove();
+
+        matchConcluded.innerText = 'Game Over';
+        matchConcluded.style.fontSize = '30px';
+        matchConcluded.style.color = 'red';
+
+        result.innerText = "It's a draw !";
+        
+        gameOver = true;
+
+        resetGame(matchConcluded);
+    }
+
 }
