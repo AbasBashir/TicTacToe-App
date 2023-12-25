@@ -225,3 +225,33 @@ function checkResult(target){
     }
 
 }
+
+function resetGame(matchConcluded){
+
+    // Adding event listener for the reset button 
+    resetBtn.addEventListener('click', function(){
+
+        
+        for (const gridItem of appContainer.children) {
+            
+            // Checking the condition of for the existence of O or X on each grid-item and deleting them
+            if (gridItem.firstElementChild) {
+                
+                gridItem.removeChild(gridItem.firstElementChild);
+
+            }
+        }
+
+        // Clearing all the necessary variables and content
+        gameOver = false;
+        matchConcluded.innerHTML = "Player <span class='display-player'>O</span>'s turn";
+        matchConcluded.removeAttribute('style');   
+        displayPlayer = document.querySelector(".display-player");
+        currentPlayer = 'O';
+        result.innerText = '';
+        resetBtn.style.display = 'none';
+        sumCount = 0;
+
+    })
+
+}
